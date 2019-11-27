@@ -1,24 +1,26 @@
 <div class="main">
-<h2>Details about {{storage.name}}:</h2>
-<h3>Location: <a [routerLink]="['/main/labdetails/'+storage.location._id]">{{ storage.location.name }}</a></h3>
-<h5>Type: {{ storage.type }}</h5>
-<h5>Temperature: {{ storage.temp }}</h5>
-<ul>
-	<li>Compartments:
-		<ul>
-			<li *ngFor="let each of storage.compartmentList">{{each.name}}</li>
-		</ul>
-	</li>
-	<li>Samples:
-		<ul>
-			<li *ngFor="let each of storage.sampleList"><a [routerLink]="['/main/sampdetails/'+each._id]">{{each.name}}</a></li>
-		</ul>
-	</li>
-	<li>Researchers with access:
-		<ul>
-			<li *ngFor='let each of usersWithAccess'><a [routerLink]="['/main/viewuser/'+each._id]">{{each.firstname}}&nbsp;{{each.lastname}}</a></li>
-		</ul>
-	</li>
-</ul>
-<button (click)=editStorage(storage._id)>Edit</button><br><button (click)=deleteStorage(storage._id)>Delete</button>
+	<h2>Details about {{storage.name}}:</h2>
+	<h3>Location: <a [routerLink]="['/main/labdetails/'+storage.location._id]">{{ storage.location.name }}</a></h3>
+	<h5>Type: {{ storage.type }}</h5>
+	<h5>Temperature: {{ storage.temp }}</h5>
+	<ul>
+		<li>Compartments:
+			<ul>
+				<li *ngFor="let each of storage.compartmentList">{{each.name}}</li>
+			</ul>
+		</li>
+		<li>Samples:
+			<ul>
+				<li *ngFor="let each of storage.sampleList"><a [routerLink]="['/main/sampdetails/'+each._id]">{{each.name}}</a></li>
+			</ul>
+		</li>
+		<li>Researchers with access:
+			<ul>
+				<li *ngFor='let each of usersWithAccess'><a [routerLink]="['/main/viewuser/'+each._id]">{{each.firstname}}&nbsp;{{each.lastname}}</a></li>
+			</ul>
+		</li>
+	</ul>
+	<button (click)=editStorage(storage._id)>Edit</button>
+	<br>
+	<button (click)=deleteStorage(storage._id)>Delete</button>
 </div>

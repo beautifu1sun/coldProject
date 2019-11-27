@@ -3,104 +3,128 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class HttpService {
+	constructor(private _http: HttpClient) {}
 
-	constructor(private _http: HttpClient) { }
-
-	getCdcFeed(){
+	getCdcFeed() {
 		return this._http.get('/cdcrss');
-	  }
-	adduser(data){
+	}
+
+	adduser(data: any) {
 		return this._http.post('/user', data);
 	}
-  login(body){
-    return this._http.put('/user', body);
-  }
 
-  getAll(){
-    return this._http.get('/user');
-  }
-  getUser(id){
-    return this._http.get('/user/'+id);
-  }
-  deleteuser(id){
-    return this._http.delete('/user/'+id);
-  }
-  updateuser(id, body){
-    return this._http.put('/user/'+id, body);
-  }
-	//Lab-related services ==>
-	createLab(newLab){
-		return this._http.post('/labs',newLab)
+  	login(body: any) {
+  		return this._http.put('/user', body);
 	}
-	getLabs(){
-		return this._http.get('/labs')
+
+  	getAll() {
+  		return this._http.get('/user');
 	}
-	getLabInfo(id){
-		return this._http.get('/labs/'+id)
+
+  	getUser(id: string) {
+  		return this._http.get('/user/' + id);
 	}
-	updateLab(lab){
-		return this._http.put('/labs/'+lab._id, lab)
+
+  	deleteuser(id: string) {
+  		return this._http.delete('/user/' + id);
 	}
-	deleteLab(id){
-		return this._http.delete('/labs/'+id)
+
+  	updateuser(id: string, body: any) {
+  		return this._http.put('/user/' + id, body);
 	}
-	addStorageToLab(storage){
-		return this._http.put('/labs/storage/add/'+storage.location._id, storage)
+
+	// Lab-related services
+	createLab(newLab: any) {
+		return this._http.post('/labs', newLab);
 	}
-	removeStorageFromLab(labID, storage){
-		return this._http.put('/labs/storage/remove/'+labID, storage)
+
+	getLabs() {
+		return this._http.get('/labs');
 	}
-	addUserToLab(user){
-		return this._http.put('/labs/user/add/'+user.lab._id,user)
+
+	getLabInfo(id: string) {
+		return this._http.get('/labs/' + id);
 	}
-	removeUserFromLab(labID, user){
-		return this._http.put('/labs/user/remove/'+labID, user)
+
+	updateLab(lab: { _id: string; }) {
+		return this._http.put('/labs/' + lab._id, lab);
 	}
-	//<==end lab services
-	//Storage-related services ==>
-	createStorage(newStorage){
-		return this._http.post('/storage',newStorage)
+
+	deleteLab(id: string) {
+		return this._http.delete('/labs/' + id);
 	}
-	getStorage(){
-		return this._http.get('/storage')
+
+	addStorageToLab(storage: { location: { _id: string; }; }) {
+		return this._http.put('/labs/storage/add/' + storage.location._id, storage);
 	}
-	getStorageInfo(id){
-		return this._http.get('/storage/'+id)
+
+	removeStorageFromLab(labID: string, storage: any) {
+		return this._http.put('/labs/storage/remove/' + labID, storage);
 	}
-	updateStorage(storage){
-		return this._http.put('/storage/'+storage._id, storage)
+
+	addUserToLab(user: { lab: { _id: string; }; }) {
+		return this._http.put('/labs/user/add/' + user.lab._id, user)
 	}
-	deleteStorage(id){
-		return this._http.delete('/storage/'+id)
+
+	removeUserFromLab(labID: string, user: any) {
+		return this._http.put('/labs/user/remove/' + labID, user)
 	}
-	addSampleToStorage(storageID,sample){
-		return this._http.put('storage/sample/add/'+storageID, sample)
+
+	// Storage-related services
+	createStorage(newStorage: any) {
+		return this._http.post('/storage', newStorage);
 	}
-	removeSampleFromStorage(storageID, sample){
-		return this._http.put('storage/sample/remove/'+storageID, sample)
+
+	getStorage() {
+		return this._http.get('/storage');
 	}
-	//<==end storage services
-	//Sample-replated services ==>
-	createSample(newSample){
-		return this._http.post('/sample',newSample)
+
+	getStorageInfo(id: string) {
+		return this._http.get('/storage/' + id);
 	}
-	getSamples(){
-		return this._http.get('/sample')
+
+	updateStorage(storage: { _id: string }) {
+		return this._http.put('/storage/' + storage._id, storage);
 	}
-	getSampleInfo(id){
-		return this._http.get('/sample/'+id)
+
+	deleteStorage(id: string) {
+		return this._http.delete('/storage/' + id);
 	}
-	updateSample(sample){
-		return this._http.put('/sample/'+sample._id, sample)
+
+	addSampleToStorage(storageID: string, sample: any) {
+		return this._http.put('storage/sample/add/' + storageID, sample);
 	}
-	deleteSample(id){
-		return this._http.delete('/sample/'+id)
+
+	removeSampleFromStorage(storageID: string, sample: any){
+		return this._http.put('storage/sample/remove/' + storageID, sample);
 	}
-	findSampleByName(query, labsName){
-		return this._http.get('/sampleFindByName/' + labsName + "/" + query );
+
+	// Sample-replated services
+	createSample(newSample: any) {
+		return this._http.post('/sample', newSample);
 	}
-	findSampleByType(query, labsName){
-		return this._http.get('/sampleFindByType/' + labsName + "/" + query );
+
+	getSamples() {
+		return this._http.get('/sample');
 	}
-	//<==end sample services
+
+	getSampleInfo(id: string) {
+		return this._http.get('/sample/' + id);
+	}
+
+	updateSample(sample: { _id: string; }) {
+		return this._http.put('/sample/' + sample._id, sample);
+	}
+
+	deleteSample(id: string) {
+		return this._http.delete('/sample/' + id);
+	}
+
+	findSampleByName(query: string, labsName: string) {
+		return this._http.get('/sampleFindByName/' + labsName + "/" + query);
+	}
+
+	findSampleByType(query: string, labsName: string) {
+		return this._http.get('/sampleFindByType/' + labsName + "/" + query);
+	}
 }

@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { SampeditComponent } from './sampedit.component';
 
 describe('SampeditComponent', () => {
@@ -9,8 +8,7 @@ describe('SampeditComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ SampeditComponent ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {

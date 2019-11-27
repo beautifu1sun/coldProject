@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -9,43 +9,41 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 })
 export class MainComponent implements OnInit {
   feed: any;
-  feedExist: Boolean;
-  innerWidth: any; 
-  showSearch:Boolean
+  feedExist: boolean;
+  innerWidth: any;
+  showSearch: boolean;
   currentRoute: any;
+
   constructor(
     private _httpService: HttpService,
-    private _route: ActivatedRoute, 
-    private _router: Router
-  
-  ) { }
+    private _route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
-    this.currentRoute = this._route.snapshot.url
-    console.log(this.currentRoute)
-    this.feedExist=false;
+    this.currentRoute = this._route.snapshot.url;
+    this.feedExist = false;
     this.feed=[];
     this.getCdcFeed();
     this.innerWidth = window.innerWidth;
-    this.showSearch = false
+    this.showSearch = false;
   }
-  getCdcFeed(){
-    this._httpService.getCdcFeed().subscribe(data=>{
-      if (data['error']){
+
+  getCdcFeed() {
+    this._httpService.getCdcFeed().subscribe(data => {
+      if (data['error']) {
         console.log("Error");
-      }
-      else {
+      } else {
         this.feed = data['rss']['items'];
         this.feedExist=true;
-        console.log(this.feed);
       }
     });
-  } 
-  toggleSearch(){
-    if(this.showSearch){
-      this.showSearch=false
-    }else{
-      this.showSearch=true
+  }
+
+  toggleSearch() {
+    if (this.showSearch) {
+      this.showSearch = false;
+    } else {
+      this.showSearch = true;
     }
   }
 }

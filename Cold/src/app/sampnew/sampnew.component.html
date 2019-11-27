@@ -1,46 +1,46 @@
 <div class="main">
-<h2>New Sample</h2>
-<a [routerLink]="['/main/sampview']">Go back</a>
-<form (submit)="onSubmit()">
-	<table>
-		<tr>
-			<td>Name:</td>
-			<td><input type="text" name="name" id="name" [(ngModel)]="newSample.name"></td>
-		</tr>
-		<tr>
-			<td>Type:</td>
-			<td><input type="text" name="type" id="type" [(ngModel)]="newSample.type"></td>
-		</tr>
-		<tr>
-			<td>Container:</td>
-			<td><input type="text" name="temp" id="temp" [(ngModel)]="newSample.container"></td>
-		</tr>
-		<tr>
-			<td>Description:</td>
-			<td><input type="text" name="temp" id="temp" [(ngModel)]="newSample.description"></td>
-		</tr>
-		<tr>
-			<td>Lab Located:</td>
-			<td><select name="lab" [(ngModel)]="newSample.location.lab" (change)="getLabInfo()">
-				<option *ngFor="let each of allLabs" [ngValue]="each">{{each.name}}</option>
-			</select></td>
-		</tr>
-		<tr>
-			<td>Storage Located:</td>
-			<td><select name="storage" [(ngModel)]="newSample.location.storage">
-				<option *ngFor="let each of availableStorage" [ngValue]="each">{{each.name}}</option>
-			</select></td>
-		</tr>
-		<tr>
-			<td>Created by:</td>
-			<td><select name="createdBy" [(ngModel)]="newSample.createdBy">
-				<option *ngFor="let each of availableResearchers" [ngValue]="each">{{each.firstname}}&nbsp;{{each.lastname}}</option>
-			</select></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><input type="submit" value="Create Sample"></td>
-		</tr>
-	</table>
-</form>
+	<h2>New Sample</h2>
+	<a [routerLink]="['/main/sampview']">Go back</a>
+	<form (submit)="onSubmit()">
+		<table>
+			<tr>
+				<td>Name:</td>
+				<td><input type="text" name="name" id="name" [(ngModel)]="newSample.name"></td>
+			</tr>
+			<tr>
+				<td>Type:</td>
+				<td><input type="text" name="type" id="type" [(ngModel)]="newSample.type"></td>
+			</tr>
+			<tr>
+				<td>Container:</td>
+				<td><input type="text" name="temp" id="temp" [(ngModel)]="newSample.container"></td>
+			</tr>
+			<tr>
+				<td>Description:</td>
+				<td><input type="text" name="temp" id="temp" [(ngModel)]="newSample.description"></td>
+			</tr>
+			<tr>
+				<td>Lab Located:</td>
+				<td><select name="lab" [(ngModel)]="newSample.location.lab" (change)="getLabInfo()">
+					<option *ngFor="let each of allLabs" [ngValue]="each">{{each.name}}</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>Storage Located:</td>
+				<td><select name="storage" [(ngModel)]="newSample.location.storage">
+					<option *ngFor="let each of availableStorage" [ngValue]="each">{{each.name}}</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>Created by:</td>
+				<td><select name="createdBy" [(ngModel)]="newSample.createdBy">
+					<option *ngFor="let each of availableResearchers" [ngValue]="each">{{each.firstname}}&nbsp;{{each.lastname}}</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Create Sample"></td>
+			</tr>
+		</table>
+	</form>
 </div>

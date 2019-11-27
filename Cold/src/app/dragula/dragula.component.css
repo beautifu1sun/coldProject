@@ -1,23 +1,23 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
-#main{
+#main {
     margin-top: 5%;
     margin-left: 10%;
     display: inline-block;
     vertical-align: top;
-    width: 500px; 
+    width: 500px;
 }
-.dragula1{
+.dragula1 {
     width: 35%;
     display: inline-block;
     padding: 10px;
     vertical-align: top
 }
-.dragula2{
+.dragula2 {
     width: 35%;
     display: inline-block;
     padding: 10px;
     vertical-align: top
 }
-.container{
+.container {
     border: 2px solid pink;
 }

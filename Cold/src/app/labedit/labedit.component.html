@@ -1,19 +1,19 @@
 <div class="main">
-<h2>Edit Lab</h2>
-<form (submit)="onSubmit()">
-	<table>
-		<tr>
-			<td>Lab Name:</td>
-			<td><input type="text" name="name" id="name" [(ngModel)]="lab.name"></td>
-		</tr>
-		<tr>
-			<td>BioSecurity Level:</td>
-			<td><input type="number" min="1" max="4" step="1" name="BSL" id="BSL" [(ngModel)]="lab.BSL"></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><input type="submit" value="Update Lab"></td>
-		</tr>
-	</table>
-</form>
+	<h2>Edit Lab</h2>
+	<form (submit)="onSubmit()">
+		<table>
+			<tr>
+				<td>Lab Name:</td>
+				<td><input type="text" name="name" id="name" [(ngModel)]="lab.name"></td>
+			</tr>
+			<tr>
+				<td>BioSecurity Level:</td>
+				<td><input type="number" min="1" max="4" step="1" name="BSL" id="BSL" [(ngModel)]="lab.BSL"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Update Lab"></td>
+			</tr>
+		</table>
+	</form>
 </div>

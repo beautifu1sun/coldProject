@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { EdituserComponent } from './edituser.component';
 
 describe('EdituserComponent', () => {
@@ -9,8 +8,7 @@ describe('EdituserComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ EdituserComponent ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +17,5 @@ describe('EdituserComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  it('should create', () => expect(component).toBeTruthy());
 });

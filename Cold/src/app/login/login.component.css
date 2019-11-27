@@ -1,24 +1,25 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
-.loginForm{
+
+.loginForm {
     font-size: 1.5rem;
     padding-top: 10%;
 }
-.form-control{
+.form-control {
     width: 20rem;
 }
-.main{
+.main {
     width: 20%;
     margin: 0 auto;
 }
-.error{
-    color: red; 
+.error {
+    color: red;
 }
-.logo{
+.logo {
     margin-left: -25%;
     padding-top: 70%;
     width: 120%;
 }
-#main-wrapper{
+#main-wrapper {
     height: stretch;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -29,7 +30,7 @@
     background-image: url("assets\images\home.png");
     object-fit: cover;
 }
-button{
+button {
     float: right;
     width: 10rem;
     margin-top: 0.5rem;

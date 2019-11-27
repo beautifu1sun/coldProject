@@ -1,51 +1,51 @@
 <div class="main">
-    <form class="loginForm" (submit)="adduser()">
-      <table>
-        <tbody>
-          <tr>
-            <td><label>First Name: </label></td>
-            <td><input type="text" name="firstname" [(ngModel)]="newuser.firstname"></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td><p class="error" *ngIf="errors['first']">{{ errors.first }}</p></td>
-          </tr>
-            <td><label>Last Name: </label></td>
-            <td><input type="text" name="lastname" [(ngModel)]="newuser.lastname"></td>
-            <td><p class="error" *ngIf="errors['last']">{{ errors.last }}</p></td>
-          <tr>
-            <td><label>Username: </label></td>
-            <td><input placeholder="This is useless" type="text" name="username" [(ngModel)]="newuser.username"></td>
-            <td><p class="error" *ngIf="errors['username']">{{ errors.username }}</p></td>
-          </tr>
-          <tr>
-            <td><label>Email: </label></td>
-            <td><input type="text" name="email" [(ngModel)]="newuser.email"></td>
-            <td><p class="error" *ngIf="errors['email']">{{ errors.email }}</p></td>
-          </tr>
-          <tr>
-            <td><label>Lab: </label></td>
-            <td><select name="lab" [(ngModel)]="newuser.lab">
-                  <option *ngFor="let each of allLabs" [ngValue]="each">{{each.name}}</option>
-                </select>
-            </td>
-          </tr>
-          <tr>
-            <td><label>Password: </label></td>
-            <td><input type="text" name="password" [(ngModel)]="newuser.password"></td>
-            <td><p class="error" *ngIf="errors['password']">{{ errors.password }}</p></td>
-          </tr>
-          <tr>
-            <td><label>Confirm Password: </label></td>
-            <td><input type="text" name="confirm" [(ngModel)]="newuser.confirm"></td>
-            <td><p class="error" *ngIf="errors['confirm']">{{ errors.confirm }}</p></td>
-          </tr>
-          <br>
-          <tr>
-            <td><button class="btn btn-primary" (click)='goback()'>Cancel</button></td>
-            <td><button class="btn btn-primary" type="submit">Submit</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </form>
-  </div>
+  <form class="loginForm" (submit)="adduser()">
+    <table>
+      <tbody>
+        <tr>
+          <td><label>First Name: </label></td>
+          <td><input type="text" name="firstname" [(ngModel)]="newuser.firstname"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><p class="error" *ngIf="errors['first']">{{ errors.first }}</p></td>
+        </tr>
+          <td><label>Last Name: </label></td>
+          <td><input type="text" name="lastname" [(ngModel)]="newuser.lastname"></td>
+          <td><p class="error" *ngIf="errors['last']">{{ errors.last }}</p></td>
+        <tr>
+          <td><label>Username: </label></td>
+          <td><input placeholder="This is useless" type="text" name="username" [(ngModel)]="newuser.username"></td>
+          <td><p class="error" *ngIf="errors['username']">{{ errors.username }}</p></td>
+        </tr>
+        <tr>
+          <td><label>Email: </label></td>
+          <td><input type="text" name="email" [(ngModel)]="newuser.email"></td>
+          <td><p class="error" *ngIf="errors['email']">{{ errors.email }}</p></td>
+        </tr>
+        <tr>
+          <td><label>Lab: </label></td>
+          <td><select name="lab" [(ngModel)]="newuser.lab">
+                <option *ngFor="let each of allLabs" [ngValue]="each">{{each.name}}</option>
+              </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label>Password: </label></td>
+          <td><input type="text" name="password" [(ngModel)]="newuser.password"></td>
+          <td><p class="error" *ngIf="errors['password']">{{ errors.password }}</p></td>
+        </tr>
+        <tr>
+          <td><label>Confirm Password: </label></td>
+          <td><input type="text" name="confirm" [(ngModel)]="newuser.confirm"></td>
+          <td><p class="error" *ngIf="errors['confirm']">{{ errors.confirm }}</p></td>
+        </tr>
+        <br>
+        <tr>
+          <td><button class="btn btn-primary" (click)='goback()'>Cancel</button></td>
+          <td><button class="btn btn-primary" type="submit">Submit</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</div>

@@ -1,28 +1,28 @@
 
 <div id="main-wrapper">
-<div class="main">
-  <img class="logo" src="../assets/images/cold_logo2.png" alt="Cold Logo">
-  <form class="loginForm" (submit)="loginuser()">
-    <table>
-      <tbody>
-        <tr *ngIf="errorcheck">
-          <td></td>
-          <td class="error">{{ errors }}</td>
-        </tr>
-        <tr>
-          <td><label></label></td>
-          <td><input placeholder="Username" class="form-control"  type="text" name="username" [(ngModel)]="login.username"></td>
-        </tr>
-        <tr>
-          <td><label></label></td>
-          <td><input placeholder="Password" class="form-control" type="text" name="password" [(ngModel)]="login.password"></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td><button class="btn btn-primary" type="submit">Submit</button></td>
-        </tr>
-      </tbody>
-    </table>
-  </form>
-</div>
+  <div class="main">
+    <img class="logo" src="../assets/images/cold_logo2.png" alt="Cold Logo">
+    <form class="loginForm" (submit)="loginuser()">
+      <table>
+        <tbody>
+          <tr *ngIf="errorcheck">
+            <td></td>
+            <td class="error">{{ errors }}</td>
+          </tr>
+          <tr>
+            <td><label></label></td>
+            <td><input placeholder="Username" class="form-control"  type="text" name="username" [(ngModel)]="login.username"></td>
+          </tr>
+          <tr>
+            <td><label></label></td>
+            <td><input placeholder="Password" class="form-control" type="text" name="password" [(ngModel)]="login.password"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><button class="btn btn-primary" type="submit">Submit</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
 </div>

@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { StordetailsComponent } from './stordetails.component';
 
 describe('StordetailsComponent', () => {
@@ -9,8 +8,7 @@ describe('StordetailsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ StordetailsComponent ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {

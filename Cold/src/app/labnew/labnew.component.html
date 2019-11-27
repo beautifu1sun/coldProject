@@ -1,20 +1,20 @@
 <div class="main">
-<h2>New Lab</h2>
-<a [routerLink]="['/main/labview']">Go back</a>
-<form (submit)="onSubmit()">
-	<table>
-		<tr>
-			<td>Lab Name:</td>
-			<td><input type="text" name="name" id="name" [(ngModel)]="newLab.name"></td>
-		</tr>
-		<tr>
-			<td>BioSecurity Level:</td>
-			<td><input type="number" min="1" max="4" step="1" name="BSL" id="BSL" [(ngModel)]="newLab.BSL"></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><input class="btn btn-primary" type="submit" value="Create Lab"></td>
-		</tr>
-	</table>
-</form>
+	<h2>New Lab</h2>
+	<a [routerLink]="['/main/labview']">Go back</a>
+	<form (submit)="onSubmit()">
+		<table>
+			<tr>
+				<td>Lab Name:</td>
+				<td><input type="text" name="name" id="name" [(ngModel)]="newLab.name"></td>
+			</tr>
+			<tr>
+				<td>BioSecurity Level:</td>
+				<td><input type="number" min="1" max="4" step="1" name="BSL" id="BSL" [(ngModel)]="newLab.BSL"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input class="btn btn-primary" type="submit" value="Create Lab"></td>
+			</tr>
+		</table>
+	</form>
 </div>

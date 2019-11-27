@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { StoreditComponent } from './storedit.component';
 
 describe('StoreditComponent', () => {
@@ -9,8 +8,7 @@ describe('StoreditComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ StoreditComponent ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {

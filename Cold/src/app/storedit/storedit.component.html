@@ -1,33 +1,33 @@
 <div class="main">
-<h2>Edit Storage</h2>
-<form (submit)="onSubmit()">
-	<table>
-		<tr>
-			<td>Name:</td>
-			<td><input type="text" name="name" id="name" [(ngModel)]="storage.name"></td>
-		</tr>
-		<tr>
-			<td>Type:</td>
-			<td><input type="text" name="type" id="type" [(ngModel)]="storage.type"></td>
-		</tr>
-		<tr>
-			<td>Temperature:</td>
-			<td><input type="text" name="temp" id="temp" [(ngModel)]="storage.temp"></td>
-		</tr>
-		<tr>
-			<td>Current Location:</td>
-			<td>{{currentLab.name}}</td>
-		</tr>
-		<tr>
-			<td>Location:</td>
-			<td><select name="location" [(ngModel)]="storage.location">
-				<option *ngFor="let each of allLabs" [ngValue]="each">{{each.name}}</option>
-			</select></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><input type="submit" value="Update Storage Unit"></td>
-		</tr>
-	</table>
-</form>
+	<h2>Edit Storage</h2>
+	<form (submit)="onSubmit()">
+		<table>
+			<tr>
+				<td>Name:</td>
+				<td><input type="text" name="name" id="name" [(ngModel)]="storage.name"></td>
+			</tr>
+			<tr>
+				<td>Type:</td>
+				<td><input type="text" name="type" id="type" [(ngModel)]="storage.type"></td>
+			</tr>
+			<tr>
+				<td>Temperature:</td>
+				<td><input type="text" name="temp" id="temp" [(ngModel)]="storage.temp"></td>
+			</tr>
+			<tr>
+				<td>Current Location:</td>
+				<td>{{currentLab.name}}</td>
+			</tr>
+			<tr>
+				<td>Location:</td>
+				<td><select name="location" [(ngModel)]="storage.location">
+					<option *ngFor="let each of allLabs" [ngValue]="each">{{each.name}}</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Update Storage Unit"></td>
+			</tr>
+		</table>
+	</form>
 </div>

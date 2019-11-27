@@ -1,8 +1,13 @@
 <h1>Sample Search</h1>
 <div *ngIf="labsExist">
     <input type="text" (keyup)="search($event)" placeholder="search samples..." class="input">
-    <select [(ngModel)]="searchBy" name="searchBy" id="searchBy"><option value="1">by Name</option><option value="2">by Type</option></select>
-    <select [(ngModel)]="searchLab" name="searchLab" id="searchLab"><option *ngFor="let lab of labs" [ngValue]="lab.name">{{ lab.name }}</option></select>
+    <select [(ngModel)]="searchBy" name="searchBy" id="searchBy">
+      <option value="1">by Name</option>
+      <option value="2">by Type</option>
+    </select>
+    <select [(ngModel)]="searchLab" name="searchLab" id="searchLab">
+      <option *ngFor="let lab of labs" [ngValue]="lab.name">{{ lab.name }}</option>
+    </select>
 </div>
 <hr>
 <div *ngFor="let sample of samples">

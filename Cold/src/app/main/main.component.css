@@ -1,19 +1,19 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
-*{
+
+* {
     margin: 0px;
     padding: 0px;
 }
-.logo{
+.logo {
     padding-top: 18px;
     width: 5%;
 }
-#navbar{
+#navbar {
     height: 70px;
     background-color: rgb(197, 197, 197);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-#sidebar{
+#sidebar {
     font-size: 1.5rem;
     display: inline-block;
     vertical-align: top;
@@ -23,37 +23,35 @@
     background-color: #0ea2dc;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-a{
+a {
     color: white;
 }
-ul{
+ul {
     margin-left: 60%;
 }
-
-#ghost{
+#ghost {
     display: inline-block;
     height: 0;
     position: absolute;
 }
-.tickerContainer{
+.tickerContainer {
     overflow-x: hidden;
     overflow-y: hidden;
     white-space: nowrap;
 
 }
-.myStyles{
-    background: #eee;   
+.myStyles {
+    background: #eee;
     color: red;
     border: 1px solid #ddd;
     max-width: 100%;
     cursor: pointer;
 }
-#search-div{
+#search-div {
     position: fixed;
     left: 65%;
     top: 15%;
     width: 30%;
     display: inline-block;
     vertical-align: top;
-    
 }

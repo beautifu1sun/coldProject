@@ -1,13 +1,15 @@
 <div class="main">
-<h2>Details about {{sample.name}}:</h2>
-<h3>Type: {{sample.type}}</h3>
-<h4>Container: {{sample.container}}</h4>
-<p>Description: {{sample.description}}</p>
-<p>Location:</p>
-<ul>
-	<li>Lab: <a [routerLink]="['/main/labdetails/'+sample.location.lab._id]">{{sample.location.lab.name}}</a></li>
-	<li>Storage Unit: <a [routerLink]="['/main/stordetails/'+sample.location.storage._id]">{{sample.location.storage.name}}</a></li>
-</ul>
-<p>Created/ordered by: {{sample.createdBy.firstname}} {{sample.createdBy.lastname}}</p>
-<button (click)=editSample()>Edit</button><br><button (click)=deleteSample()>Delete</button>
+	<h2>Details about {{sample.name}}:</h2>
+	<h3>Type: {{sample.type}}</h3>
+	<h4>Container: {{sample.container}}</h4>
+	<p>Description: {{sample.description}}</p>
+	<p>Location:</p>
+	<ul>
+		<li>Lab: <a [routerLink]="['/main/labdetails/'+sample.location.lab._id]">{{sample.location.lab.name}}</a></li>
+		<li>Storage Unit: <a [routerLink]="['/main/stordetails/'+sample.location.storage._id]">{{sample.location.storage.name}}</a></li>
+	</ul>
+	<p>Created/ordered by: {{sample.createdBy.firstname}} {{sample.createdBy.lastname}}</p>
+	<button (click)=editSample()>Edit</button>
+	<br>
+	<button (click)=deleteSample()>Delete</button>
 </div>

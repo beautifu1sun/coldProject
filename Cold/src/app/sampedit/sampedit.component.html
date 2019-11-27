@@ -1,52 +1,52 @@
 <div class="main">
-<h2>Edit Sample:</h2>
-<a [routerLink]="['/main/sampview']">Go back</a>
-<form (submit)="onSubmit()">
-	<table>
-		<tr>
-			<td>Name:</td>
-			<td><input type="text" name="name" id="name" [(ngModel)]="sample.name"></td>
-		</tr>
-		<tr>
-			<td>Type:</td>
-			<td><input type="text" name="type" id="type" [(ngModel)]="sample.type"></td>
-		</tr>
-		<tr>
-			<td>Container:</td>
-			<td><input type="text" name="temp" id="temp" [(ngModel)]="sample.container"></td>
-		</tr>
-		<tr>
-			<td>Description:</td>
-			<td><input type="text" name="temp" id="temp" [(ngModel)]="sample.description"></td>
-		</tr>
-		<tr>
-			<td>Current Lab Location:</td>
-			<td>{{ currentLab.name }}</td>
-		</tr>
-		<tr>
-			<td>Lab Located:</td>
-			<td><select name="lab" [(ngModel)]="sample.location.lab" (change)="getLabInfo()">
-				<option *ngFor="let each of allLabs" [ngValue]="each">{{each.name}}</option>
-			</select></td>
-		</tr>
-		<tr>
-			<td>Current Storage Location:</td>
-			<td>{{ currentStorage.name }}</td>
-		</tr>
-		<tr>
-			<td>Storage Located:</td>
-			<td><select name="storage" [(ngModel)]="sample.location.storage">
-				<option *ngFor="let each of availableStorage" [ngValue]="each">{{each.name}}</option>
-			</select></td>
-		</tr>
-		<tr>
-			<td>Created by:</td>
-			<td>{{sample.createdBy.name}}</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><input type="submit" value="Edit Sample"></td>
-		</tr>
-	</table>
-</form>
+	<h2>Edit Sample:</h2>
+	<a [routerLink]="['/main/sampview']">Go back</a>
+	<form (submit)="onSubmit()">
+		<table>
+			<tr>
+				<td>Name:</td>
+				<td><input type="text" name="name" id="name" [(ngModel)]="sample.name"></td>
+			</tr>
+			<tr>
+				<td>Type:</td>
+				<td><input type="text" name="type" id="type" [(ngModel)]="sample.type"></td>
+			</tr>
+			<tr>
+				<td>Container:</td>
+				<td><input type="text" name="temp" id="temp" [(ngModel)]="sample.container"></td>
+			</tr>
+			<tr>
+				<td>Description:</td>
+				<td><input type="text" name="temp" id="temp" [(ngModel)]="sample.description"></td>
+			</tr>
+			<tr>
+				<td>Current Lab Location:</td>
+				<td>{{ currentLab.name }}</td>
+			</tr>
+			<tr>
+				<td>Lab Located:</td>
+				<td><select name="lab" [(ngModel)]="sample.location.lab" (change)="getLabInfo()">
+					<option *ngFor="let each of allLabs" [ngValue]="each">{{each.name}}</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>Current Storage Location:</td>
+				<td>{{ currentStorage.name }}</td>
+			</tr>
+			<tr>
+				<td>Storage Located:</td>
+				<td><select name="storage" [(ngModel)]="sample.location.storage">
+					<option *ngFor="let each of availableStorage" [ngValue]="each">{{each.name}}</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>Created by:</td>
+				<td>{{sample.createdBy.name}}</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Edit Sample"></td>
+			</tr>
+		</table>
+	</form>
 </div>

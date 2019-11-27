@@ -8,43 +8,43 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
   styleUrls: ['./viewuser.component.css']
 })
 export class ViewuserComponent implements OnInit {
-  id: any; 
-  User: any; 
+  id: any;
+  user: any;
+
   constructor(
-    private _http: HttpService, 
-    private _route: ActivatedRoute, 
+    private _http: HttpService,
+    private _route: ActivatedRoute,
     private _router: Router
-  ) { }
+  ) {}
 
   ngOnInit() {
-    this._route.params.subscribe((params: Params)=>{
-      this.id = params['id']
+    this._route.params.subscribe((params: Params) => {
+      this.id = params['id'];
     });
-    this.User = {firstname: '', lastname: '', email: '', username: ''}
+    this.user = { firstname: '', lastname: '', email: '', username: '' };
     this.getUser(this.id);
-
   }
-  getUser(id){
+
+  getUser(id: any) {
     var status = this._http.getUser(id);
-    status.subscribe(data =>{
-      this.User = data; 
-      console.log(this.User);
-    })
-  }
-
-  deleteuser(id){
-    var status = this._http.deleteuser(id)
     status.subscribe(data => {
-      this.removeUserFromLab(this.User.lab._id, this.User)
-      this._router.navigate(['/main/allusers']);
-    })
+      this.user = data;
+    });
   }
 
-  edituser(id){
-    this._router.navigate(['/main/edituser/'+id]);
+  deleteuser(id: any) {
+    var status = this._http.deleteuser(id);
+    status.subscribe(() => {
+      this.removeUserFromLab(this.user.lab._id, this.user);
+      this._router.navigate(['/main/allusers']);
+    });
   }
-  removeUserFromLab(id, user){
-    this._http.removeUserFromLab(id, user).subscribe(data=>{
-    })
+
+  edituser(id: string){
+    this._router.navigate(['/main/edituser/'+ id]);
+  }
+
+  removeUserFromLab(id: any, user: any) {
+    this._http.removeUserFromLab(id, user).subscribe(() => {});
   }
 }

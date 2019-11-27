@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { DragulaComponent } from './dragula.component';
 
 describe('DragulaComponent', () => {
@@ -9,8 +8,7 @@ describe('DragulaComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ DragulaComponent ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {

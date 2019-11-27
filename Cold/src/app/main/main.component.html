@@ -1,51 +1,55 @@
 <div id="wrapper">
-<nav id="navbar" class="navbar navbar-expand-lg">
+  <nav id="navbar" class="navbar navbar-expand-lg">
     <img class="logo" src="../assets/images/logo_only.png" alt="Cold Logo">
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div id="sidebar" class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand" [routerLink]="['/main/']"></a>
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['/main/']"><img src="../assets/images/icons/acct_ic.png" alt="account">Settings<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['/main/storview']"><img src="../assets/images/icons/freezer_ic.png" alt="freezer">Freezers</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['/main/']"><img src="../assets/images/icons/home_ic.png" alt="home">Home</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['/main/newuser']"><img src="../assets/images/icons/reg_ic.png" alt="register">New User</a>
-      </li>
-    </ul>
-   
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="sidebar" class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" [routerLink]="['/main/']"></a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/main/']">
+            <img src="../assets/images/icons/acct_ic.png" alt="account">Settings<span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/main/storview']">
+            <img src="../assets/images/icons/freezer_ic.png" alt="freezer">Freezers
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/main/']">
+            <img src="../assets/images/icons/home_ic.png" alt="home">Home
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/main/newuser']">
+            <img src="../assets/images/icons/reg_ic.png" alt="register">New User
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="tickerContainer myStyles" *ngIf="feedExist">
+      <div ticker [text]=feed [speed]="15" [padding-left]="innerWidth" [size]="20"></div>
   </div>
-</nav>
-<div class="tickerContainer myStyles" *ngIf="feedExist">
-    <div ticker [text]=feed [speed]="15" [padding-left]="innerWidth" [size]="20"></div>
+  <div id="ghost"></div>
 </div>
-<div id="ghost"></div>
-</div>
-
 <div id="sidebar">
-<nav class="nav flex-column">
-  <a class="nav-link" [routerLink]="['/'+currentRoute[0].path]" (click)='toggleSearch()'><img src="../assets/images/icons/zoom.png" alt="register">&nbsp; Search</a>
-  <a class="nav-link" [routerLink]="['/main/labview']"><img src="../assets/images/icons/lab.png" alt="register">&nbsp; View All Labs</a>
-  <a class="nav-link" [routerLink]="['/main/storview']"><img src="../assets/images/icons/freezer.png" alt="register">&nbsp; View All Freezers</a>
-  <a class="nav-link" [routerLink]="['/main/sampview']"><img src="../assets/images/icons/pdish.png" alt="register">&nbsp; View All Samples</a>
-  <a class="nav-link" [routerLink]="['/main/allusers']"><img src="../assets/images/icons/user.png" alt="register">&nbsp; View All Users</a>
-  <a class="nav-link" [routerLink]="['/main/labnew']"><img src="../assets/images/icons/clab.png" alt="register">&nbsp; Create Lab</a>
-  <a class="nav-link active" [routerLink]="['/main/stornew']"><img src="../assets/images/icons/cfreezer.png" alt="register">&nbsp; Create Freezer</a>
-  <a class="nav-link" [routerLink]="['/main/sampnew']"><img src="../assets/images/icons/csample.png" alt="register">&nbsp; Create Sample</a>
-  <a class="nav-link" [routerLink]="['/main/dragula']"><img src="../assets/images/icons/csample.png" alt="register">&nbsp; Move Samples</a>
-  
-</nav>
-
+  <nav class="nav flex-column">
+    <a class="nav-link" [routerLink]="['/'+currentRoute[0].path]" (click)='toggleSearch()'><img src="../assets/images/icons/zoom.png" alt="register">&nbsp; Search</a>
+    <a class="nav-link" [routerLink]="['/main/labview']"><img src="../assets/images/icons/lab.png" alt="register">&nbsp; View All Labs</a>
+    <a class="nav-link" [routerLink]="['/main/storview']"><img src="../assets/images/icons/freezer.png" alt="register">&nbsp; View All Freezers</a>
+    <a class="nav-link" [routerLink]="['/main/sampview']"><img src="../assets/images/icons/pdish.png" alt="register">&nbsp; View All Samples</a>
+    <a class="nav-link" [routerLink]="['/main/allusers']"><img src="../assets/images/icons/user.png" alt="register">&nbsp; View All Users</a>
+    <a class="nav-link" [routerLink]="['/main/labnew']"><img src="../assets/images/icons/clab.png" alt="register">&nbsp; Create Lab</a>
+    <a class="nav-link active" [routerLink]="['/main/stornew']"><img src="../assets/images/icons/cfreezer.png" alt="register">&nbsp; Create Freezer</a>
+    <a class="nav-link" [routerLink]="['/main/sampnew']"><img src="../assets/images/icons/csample.png" alt="register">&nbsp; Create Sample</a>
+    <a class="nav-link" [routerLink]="['/main/dragula']"><img src="../assets/images/icons/csample.png" alt="register">&nbsp; Move Samples</a>
+  </nav>
 </div>
 
 <router-outlet></router-outlet>
-<div id="search-div" *ngIf="showSearch"><app-search></app-search></div>
-
+<div id="search-div" *ngIf="showSearch">
+  <app-search></app-search>
+</div>

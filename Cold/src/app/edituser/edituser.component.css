@@ -1,20 +1,20 @@
-.loginForm{
-    border: 2px solid black; 
-    padding: 10px; 
+.loginForm {
+    border: 2px solid black;
+    padding: 10px;
 }
 
-.main{
-    width: 500px; 
+.main {
+    width: 500px;
 }
 
-.formbutton{
-    padding: 10px; 
-    color: white; 
+.formbutton {
+    padding: 10px;
+    color: white;
     background-color: steelblue;
-    border: none; 
-    border-radius: 8px; 
+    border: none;
+    border-radius: 8px;
 }
 
-.error{
-    color: red; 
+.error {
+    color: red;
 }

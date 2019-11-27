@@ -1,12 +1,12 @@
 <div class="main">
-<h2>All Storage Units</h2>
-<a [routerLink]="['/main/labview']">View Labs</a>
-<a [routerLink]="['/main/stornew']">New Storage Unit</a>
-<ul *ngFor='let each of allStorage'>
-	<li><a [routerLink]="['/main/stordetails/'+each._id]">{{ each.name }}</a>
-		<ul>
-			<li>Location: {{ each.location.name }}</li>
-		</ul>
-	</li>
-</ul>
+	<h2>All Storage Units</h2>
+	<a [routerLink]="['/main/labview']">View Labs</a>
+	<a [routerLink]="['/main/stornew']">New Storage Unit</a>
+	<ul *ngFor='let each of allStorage'>
+		<li><a [routerLink]="['/main/stordetails/'+each._id]">{{ each.name }}</a>
+			<ul>
+				<li>Location: {{ each.location.name }}</li>
+			</ul>
+		</li>
+	</ul>
 </div>

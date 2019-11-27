@@ -1,17 +1,21 @@
 <div class="main">
-<h2>Details about {{lab.name}}:</h2>
-<h3>BioSafety Level: {{lab.BSL}}</h3>
-<ul>
-	<li>Personnel:
-		<ul>
-			<li *ngFor='let person of lab.userList'><a [routerLink]="['/main/viewuser/'+person._id]">{{ person.firstname }}&nbsp;{{ person.lastname }}</a></li>
-		</ul>
-	</li>
-	<li>Sample Storage Units:
-		<ul>
-			<li *ngFor='let storage of lab.storageList'><a [routerLink]="['/main/stordetails/'+storage._id]">{{ storage.name }}</a></li>
-		</ul>
-	</li>
-</ul>
-<button (click)=editLab(lab._id)>Edit</button><br><button (click)=deleteLab(lab._id)>Delete</button>
+	<h2>Details about {{lab.name}}:</h2>
+	<h3>BioSafety Level: {{lab.BSL}}</h3>
+	<ul>
+		<li>Personnel:
+			<ul>
+				<li *ngFor='let person of lab.userList'>
+					<a [routerLink]="['/main/viewuser/'+person._id]">{{ person.firstname }}&nbsp;{{ person.lastname }}</a>
+				</li>
+			</ul>
+		</li>
+		<li>Sample Storage Units:
+			<ul>
+				<li *ngFor='let storage of lab.storageList'>
+					<a [routerLink]="['/main/stordetails/'+storage._id]">{{ storage.name }}</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<button (click)=editLab(lab._id)>Edit</button><br><button (click)=deleteLab(lab._id)>Delete</button>
 </div>

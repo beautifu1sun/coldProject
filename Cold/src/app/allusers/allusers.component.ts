@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
-import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-allusers',
@@ -8,22 +7,17 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
   styleUrls: ['./allusers.component.css']
 })
 export class AllusersComponent implements OnInit {
-  AllUsers: any; 
-  constructor(
-    private _http: HttpService, 
-    private _route: ActivatedRoute, 
-    private _router: Router
-  ) { }
+  AllUsers: any;
+  constructor(private _http: HttpService) {}
 
   ngOnInit() {
     this.allUsers();
   }
 
-  allUsers(){
+  allUsers() {
     var status = this._http.getAll();
     status.subscribe(data => {
-      this.AllUsers = data; 
+      this.AllUsers = data;
     });
   }
-
 }
